@@ -67,7 +67,7 @@ também não verifica a CNH do motorista.
 
 ## 📝 4. Escopo Funcional (User Stories)
 
-### US01 — Criar e confirmar uma conta · `Must Have` · `M` · Status: `Draft`
+### US01 — Criar e confirmar uma conta · `Must Have` · `M` · Status: `Ready`
 
 **Como** pessoa interessada em caronas, **eu quero** criar uma conta e confirmar
 meu e-mail **para que** eu possa participar das viagens.
@@ -85,7 +85,7 @@ meu e-mail **para que** eu possa participar das viagens.
 
 **Regras relacionadas:** RN02, RN03.
 
-### US02 — Entrar e sair da conta · `Must Have` · `M` · Status: `Draft`
+### US02 — Entrar e sair da conta · `Must Have` · `M` · Status: `Ready`
 
 **Como** pessoa cadastrada, **eu quero** entrar e sair da minha conta, escolhendo
 se desejo permanecer conectada, **para que** eu possa acessar minhas caronas e
@@ -103,7 +103,7 @@ viagens.
 
 **Regras relacionadas:** RN03, RN18.
 
-### US03 — Redefinir a senha · `Must Have` · `S` · Status: `Draft`
+### US03 — Redefinir a senha · `Must Have` · `S` · Status: `Ready`
 
 **Como** pessoa cadastrada que esqueceu a senha, **eu quero** receber um link no
 meu e-mail **para que** eu possa definir uma nova senha e recuperar o acesso.
@@ -119,7 +119,7 @@ meu e-mail **para que** eu possa definir uma nova senha e recuperar o acesso.
 
 **Regras relacionadas:** RN03.
 
-### US04 — Cadastrar e remover veículos · `Must Have` · `M` · Status: `Draft`
+### US04 — Cadastrar e remover veículos · `Must Have` · `M` · Status: `Ready`
 
 **Como** pessoa cadastrada, **eu quero** gerenciar meus veículos **para que** eu
 possa escolher com qual deles oferecerei caronas.
@@ -136,7 +136,7 @@ possa escolher com qual deles oferecerei caronas.
 
 **Regras relacionadas:** RN04, RN05.
 
-### US05 — Publicar uma viagem avulsa · `Must Have` · `M` · Status: `Draft`
+### US05 — Publicar uma viagem avulsa · `Must Have` · `M` · Status: `Ready`
 
 **Como** motorista, **eu quero** anunciar uma viagem com trajeto, horário e vagas
 **para que** eu possa receber solicitações de carona.
@@ -152,7 +152,7 @@ possa escolher com qual deles oferecerei caronas.
 
 **Regras relacionadas:** RN03, RN05, RN06, RN07.
 
-### US06 — Publicar uma programação recorrente · `Must Have` · `M` · Status: `Draft`
+### US06 — Publicar uma programação recorrente · `Must Have` · `M` · Status: `Ready`
 
 **Como** motorista, **eu quero** programar viagens que se repetem durante a semana
 **para que** eu possa oferecer caronas na minha rotina sem cadastrar cada ocorrência
@@ -171,7 +171,7 @@ manualmente.
 
 **Regras relacionadas:** RN06, RN07, RN11.
 
-### US07 — Encontrar caronas próximas · `Must Have` · `M` · Status: `Draft`
+### US07 — Encontrar caronas próximas · `Must Have` · `M` · Status: `Ready`
 
 **Como** pessoa interessada em caronas, **eu quero** pesquisar viagens por local,
 sentido e data **para que** eu possa encontrar uma opção adequada ao meu
@@ -190,7 +190,7 @@ deslocamento.
 
 **Regras relacionadas:** RN03, RN18, RN26, RN27, RN28.
 
-### US08 — Solicitar uma carona e receber uma decisão · `Must Have` · `M` · Status: `Draft`
+### US08 — Solicitar uma carona e receber uma decisão · `Must Have` · `M` · Status: `Ready`
 
 **Como** passageiro, **eu quero** solicitar uma vaga e receber a decisão do
 motorista **para que** eu possa confirmar minha participação na viagem.
@@ -210,7 +210,7 @@ motorista **para que** eu possa confirmar minha participação na viagem.
 
 **Regras relacionadas:** RN03, RN08, RN09, RN10, RN28.
 
-### US09 — Trocar mensagens sobre uma carona · `Must Have` · `M` · Status: `Draft`
+### US09 — Trocar mensagens sobre uma carona · `Must Have` · `M` · Status: `Ready`
 
 **Como** passageiro ou motorista, **eu quero** trocar mensagens sobre uma
 solicitação de carona **para que** eu possa combinar horário e ponto de encontro.
@@ -230,7 +230,7 @@ solicitação de carona **para que** eu possa combinar horário e ponto de encon
 
 **Regras relacionadas:** RN06, RN24, RN25.
 
-### US10 — Alterar uma viagem ou programação · `Must Have` · `M` · Status: `Draft`
+### US10 — Alterar uma viagem ou programação · `Must Have` · `M` · Status: `Ready`
 
 **Como** motorista, **eu quero** alterar minhas viagens e programações **para que**
 eu possa adaptar a oferta quando minha rotina ou meu veículo mudar.
@@ -249,7 +249,7 @@ eu possa adaptar a oferta quando minha rotina ou meu veículo mudar.
 
 **Regras relacionadas:** RN07, RN12, RN13, RN14.
 
-### US11 — Cancelar pedidos, reservas e viagens · `Must Have` · `M` · Status: `Draft`
+### US11 — Cancelar pedidos, reservas e viagens · `Must Have` · `M` · Status: `Ready`
 
 **Como** participante de uma carona, **eu quero** cancelar um compromisso informando
 o motivo **para que** eu possa avisar as outras pessoas e liberar a viagem ou a vaga.
@@ -269,7 +269,7 @@ o motivo **para que** eu possa avisar as outras pessoas e liberar a viagem ou a 
 
 **Regras relacionadas:** RN12, RN14, RN15, RN16, RN19.
 
-### US12 — Receber avisos e bloqueios · `Must Have` · `M` · Status: `Draft`
+### US12 — Receber avisos e bloqueios · `Must Have` · `M` · Status: `Ready`
 
 **Como** participante da comunidade, **eu quero** ser avisado sobre as consequências
 dos cancelamentos tardios **para que** eu possa acompanhar minha situação e evitar
@@ -292,7 +292,7 @@ novos bloqueios.
 
 **Regras relacionadas:** RN15, RN16, RN17, RN18, RN19, RN20, RN21.
 
-### US13 — Confirmar presença e concluir uma viagem · `Must Have` · `M` · Status: `Draft`
+### US13 — Confirmar presença e concluir uma viagem · `Must Have` · `M` · Status: `Ready`
 
 **Como** participante de uma carona, **eu quero** registrar a confirmação e a
 conclusão da viagem **para que** o histórico de viagens realizadas permaneça correto.
