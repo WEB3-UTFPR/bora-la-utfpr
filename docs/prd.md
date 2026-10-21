@@ -148,7 +148,8 @@ possa escolher com qual deles oferecerei caronas.
 - [ ] **CA3 — Dado** o veículo selecionado, **quando** eu definir as vagas, **então** poderei oferecer de uma vaga até a capacidade máxima de passageiros desse veículo.
 - [ ] **CA4 — Dado** que os dados estão completos e a rota foi calculada, **quando** eu publicar, **então** a viagem ficará disponível para consulta, inclusive por visitantes.
 - [ ] **CA5 — Dado** que faltam informações, as vagas são inválidas ou a saída está no passado, **quando** eu tentar publicar, **então** o sistema indicará o que corrigir e impedirá a publicação.
-- [ ] **CA6 — Dado** que não foi possível calcular a rota, **quando** a tentativa falhar, **então** o sistema informará o problema e permitirá corrigir o local ou tentar novamente, sem publicar uma viagem incompleta.
+- [ ] **CA6 — Dado** que não foi possível calcular a rota, **quando** a tentativa falhar, **então** o sistema informará o problema, manterá os campos preenchidos e permitirá corrigir o local ou tentar novamente, sem publicar uma viagem incompleta.
+- [ ] **CA7 — Dado** que os dados estão completos e a rota foi calculada, **quando** uma falha impedir a publicação, **então** o sistema informará o problema, manterá os campos preenchidos e permitirá tentar novamente, sem publicar uma viagem incompleta.
 
 **Regras relacionadas:** RN03, RN05, RN06, RN07.
 
