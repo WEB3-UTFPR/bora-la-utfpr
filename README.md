@@ -18,8 +18,11 @@ viagens gratuitas e reduzindo a dependência do transporte coletivo.
 - [Design System](docs/design-tokens.md)
 - [Checklist da disciplina](docs/checklist.md)
 
-O protótipo navegável será produzido na etapa de design e seu link público será
-adicionado aqui após a aprovação da equipe.
+[Protótipo no Stitch](https://stitch.withgoogle.com/projects/1301683431746634861),
+informado pela equipe. Acesso público pendente de verificação.
+
+[Cópia no Figma](https://www.figma.com/design/AP057SPP6qVdCtTnHaRrBs/Sem-t%C3%ADtulo?node-id=0-1).
+Navegação por botões e acesso público em janela anônima confirmados pela equipe.
 
 ## Funcionalidades planejadas
 
