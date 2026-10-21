@@ -40,17 +40,42 @@ leitura e a aprovação de todos os integrantes.
 
 ## Modelagem de dados
 
-O diagrama de entidades e relacionamentos será definido na etapa de arquitetura,
-depois da aprovação do PRD. Ele será renderizado nesta seção em Mermaid.
+Modelo definido na [arquitetura](docs/architecture.md):
+
+```mermaid
+erDiagram
+    User ||--o{ Vehicle : owns
+    User ||--o{ Trip : drives
+    Vehicle ||--o{ Trip : used_in
+    User ||--o{ RecurringSchedule : creates
+    Vehicle ||--o{ RecurringSchedule : assigned_to
+    RecurringSchedule o|--o{ Trip : generates
+    User ||--o{ RideRequest : submits
+    Trip ||--o{ RideRequest : receives
+    RideRequest ||--o| Reservation : results_in
+    RideRequest ||--o| Conversation : has
+    Conversation ||--o{ Message : contains
+    User ||--o{ Message : sends
+    Conversation ||--|{ ConversationParticipant : has
+    User ||--o{ ConversationParticipant : participates
+    User o|--o{ Cancellation : initiates
+    Trip o|--o{ Cancellation : targeted_by
+    RideRequest o|--o{ Cancellation : targeted_by
+    Cancellation ||--o{ Infraction : source_of
+    User ||--o{ Infraction : receives
+    User ||--o{ Block : receives
+```
 
 ## Tecnologias
 
-- **Frontend:** Angular 20+ com componentes standalone.
+- **Frontend:** Angular 21 com componentes standalone e modo zoneless.
 - **Estado da interface:** Signals.
 - **Dados do MVP:** json-server.
-- **Dados da aplicação final:** BaaS a ser escolhido e registrado na arquitetura.
-- **Interface:** framework CSS a ser escolhido na etapa de design.
-- **Distribuição:** aplicação web responsiva e instalável como PWA.
+- **Dados da aplicação final:** Supabase (PostgreSQL e Auth).
+- **Interface:** PrimeNG 21, com os tokens visuais da equipe.
+- **Mapas e rotas:** Leaflet, OpenStreetMap e OpenRouteService via Edge Function na E3.
+- **Qualidade:** Vitest, ESLint/angular-eslint e Prettier.
+- **Distribuição:** aplicação web responsiva e instalável como PWA; hospedagem planejada na Vercel.
 
 ## Aplicação em produção
 
