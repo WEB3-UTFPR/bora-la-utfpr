@@ -1,0 +1,93 @@
+/* Google Fonts: Outfit (títulos) e Inter (textos e apoio) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@600;700&display=swap');
+
+:root {
+  /* Paleta Semântica */
+  --color-primaria: #f5a800;
+  --color-superficie: #ffffff;
+  --color-texto: #161c27;
+  --color-texto-suave: #525866;
+  --color-perigo: #ba1a1a;
+  --color-sucesso: #16a34a;
+  --color-desabilitado: #e2e4e9;
+
+  /* Escala de Espaçamento */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Tipografia */
+  --font-titulo: 'Outfit', sans-serif;
+  --font-texto: 'Inter', sans-serif;
+
+  /* Tamanhos e Pesos Tipográficos */
+  --text-titulo-principal-mobile: 30px;
+  --text-titulo-principal-desktop: 40px;
+  --font-weight-titulo-principal: 700;
+
+  --text-titulo-secao-mobile: 24px;
+  --text-titulo-secao-desktop: 32px;
+  --font-weight-titulo-secao: 600;
+
+  --text-padrao: 16px;
+  --font-weight-padrao: 400;
+
+  --text-compacto: 14px;
+  --font-weight-compacto: 400;
+
+  --text-legenda: 12px;
+  --font-weight-legenda: 400;
+
+  /* Estados de Botão */
+  --btn-bg-normal: #f5a800;
+  --btn-text-normal: #161c27;
+  --btn-weight: 600;
+
+  --btn-bg-hover: #e5a800;
+
+  --btn-focus-outline-width: 3px;
+  --btn-focus-outline-color: #161c27;
+  --btn-focus-outline-offset: 2px;
+
+  --btn-bg-disabled: #e2e4e9;
+  --btn-text-disabled: #525866;
+
+  /* Breakpoints (Mobile-First) */
+  --breakpoint-sm: 0px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+
+  /* Regras de Layout */
+  --layout-margin-mobile: 16px;
+  --layout-margin-tablet: 32px;
+  --layout-max-width: 1200px;
+}
+
+/* Reset / Estilo Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-texto);
+  font-size: var(--text-padrao);
+  color: var(--color-texto);
+  background-color: var(--color-superficie);
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-titulo);
+  color: var(--color-texto);
+  margin-top: 0;
+}
