@@ -1,8 +1,8 @@
 # 🎨 Tokens de Design
 
 **Projeto:** Bora Lá UTFPR
-**Versão:** 0.1.0 · rascunho em elaboração via `/utf-design`
-**Última atualização:** 2026-10-21
+**Versão:** 0.2.0 · nomes semânticos alinhados ao código na Atividade 07
+**Última atualização:** 2026-10-24
 
 > 🤖 **Este documento existe para a IA parar de inventar um botão diferente a cada
 > tela.** Não é um design system — é o mínimo que dá à prototipagem assistida algo a
@@ -20,15 +20,18 @@
 
 Nome semântico, nunca `azul-2` — a cor muda, o papel dela não.
 
+Os nomes dos tokens seguem o código em inglês; os valores e os papéis aprovados
+pela equipe foram preservados. No CSS, cores usam o prefixo `--color-`.
+
 | Token | Valor | Onde se usa |
 | --- | --- | --- |
-| `primaria` | `#F5A800` | ação principal; amarelo confirmado pela equipe |
-| `superficie` | `#FFFFFF` | fundo de card e painel; confirmado pela equipe |
-| `texto` | `#161C27` | texto padrão; confirmado pela equipe |
-| `texto-suave` | `#525866` | legenda e apoio; confirmado pela equipe |
-| `perigo` | `#BA1A1A` | erro e exclusão; confirmado pela equipe |
-| `sucesso` | `#16A34A` | confirmação; confirmado pela equipe |
-| `desabilitado` | `#E2E4E9` | fundo de controle inativo; confirmado pela equipe |
+| `primary` | `#F5A800` | ação principal; amarelo confirmado pela equipe |
+| `surface` | `#FFFFFF` | fundo de card e painel; confirmado pela equipe |
+| `text` | `#161C27` | texto padrão; confirmado pela equipe |
+| `text-muted` | `#525866` | legenda e apoio; confirmado pela equipe |
+| `danger` | `#BA1A1A` | erro e exclusão; confirmado pela equipe |
+| `success` | `#16A34A` | confirmação; confirmado pela equipe |
+| `disabled` | `#E2E4E9` | fundo de controle inativo; confirmado pela equipe |
 
 ## Escala de espaçamento
 
@@ -51,11 +54,11 @@ textos, formulários e legendas, com os tamanhos e pesos abaixo.
 
 | Token | Família · tamanho · peso | Papel |
 | --- | --- | --- |
-| `titulo-principal` | Outfit · 30px no celular / 40px no desktop · 700 | título principal |
-| `titulo-secao` | Outfit · 24px no celular / 32px no desktop · 600 | título de seção |
-| `texto-padrao` | Inter · 16px · 400 | textos e formulários |
-| `texto-compacto` | Inter · 14px · 400 | texto compacto |
-| `legenda` | Inter · 12px · 400 | legendas e textos de apoio |
+| `title` | Outfit · 30px no celular / 40px no desktop · 700 | título principal |
+| `section` | Outfit · 24px no celular / 32px no desktop · 600 | título de seção |
+| `body` | Inter · 16px · 400 | textos e formulários |
+| `compact` | Inter · 14px · 400 | texto compacto |
+| `caption` | Inter · 12px · 400 | legendas e textos de apoio |
 
 ## Estados de botão
 

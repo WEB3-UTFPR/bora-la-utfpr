@@ -84,9 +84,44 @@ posterior do projeto.
 
 ## Execução local
 
-O projeto ainda está na fase de concepção e planejamento. As instruções para
-instalação e execução serão adicionadas quando a estrutura Angular for criada
-pelo fluxo `/utf-setup`.
+Requisitos: Node.js 22.12 ou superior na linha 22 (ou Node 24+) e npm 11.6.4.
+O Node 22.23.1 foi utilizado na validação do setup. O npm 10.9.8 apresentou erro
+interno na primeira instalação; use a versão indicada no `packageManager`.
+
+Na raiz do repositório, instale com `npm ci`. Para iniciar:
+
+```bash
+npm start
+```
+
+O Angular fica disponível em `http://localhost:4200`. Em outro terminal, inicie
+a API fake do MVP:
+
+```bash
+npm run api
+```
+
+O json-server usa `db.json` na raiz e escuta em `http://localhost:3000`. O arquivo
+começa vazio; dados e telas de negócio serão acrescentados pelas histórias.
+
+| Comando na raiz        | Finalidade                                               |
+| ---------------------- | -------------------------------------------------------- |
+| `npm test`             | testes Vitest em modo contínuo                           |
+| `npm run test:ci`      | executar a suíte uma vez                                 |
+| `npm run lint`         | verificar TypeScript e templates                         |
+| `npm run build`        | gerar o build de produção em `apps/web/dist/web/browser` |
+| `npm run format:check` | conferir a formatação                                    |
+| `npm run format`       | aplicar a formatação                                     |
+
+A estrutura usa npm workspaces: a instalação fica em `node_modules` na raiz,
+com um único `package-lock.json`. `apps/api` é uma reserva para o futuro e não
+possui backend próprio. Em `apps/web/src/app`, as pastas `core`, `shared` e
+`features` estão preparadas para as próximas histórias.
+
+O setup inclui manifest, ícones e service worker PWA. O service worker é habilitado
+no build de produção; `npm start` usa o modo de desenvolvimento. Os fluxos de
+autenticação, as rotas de negócio, os estados offline e as integrações da E3 ainda
+serão implementados nas respectivas histórias.
 
 ## Telas da aplicação
 

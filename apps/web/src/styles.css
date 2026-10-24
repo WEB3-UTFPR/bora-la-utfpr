@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@600;700&display=swap');
+
+/* Semantic tokens approved in docs/design-tokens.md. */
+:root {
+  --color-primary: #f5a800;
+  --color-primary-hover: #e5a800;
+  --color-surface: #ffffff;
+  --color-text: #161c27;
+  --color-text-muted: #525866;
+  --color-danger: #ba1a1a;
+  --color-success: #16a34a;
+  --color-disabled: #e2e4e9;
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --text-title: 30px;
+  --text-section: 24px;
+  --text-body: 16px;
+  --text-compact: 14px;
+  --text-caption: 12px;
+  --layout-margin: 16px;
+  --layout-max-width: 1200px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+h1 {
+  font-size: var(--text-title);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--text-section);
+  font-weight: 600;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-body);
+}
+
+button:focus-visible {
+  outline: 3px solid var(--color-text);
+  outline-offset: 2px;
+}
+
+.p-button:disabled {
+  background: var(--color-disabled);
+  border-color: var(--color-disabled);
+  color: var(--color-text-muted);
+}
+
+/* Mobile-first: md starts at 768px; lg starts at 1024px. */
+@media (min-width: 768px) {
+  :root {
+    --layout-margin: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --text-title: 40px;
+    --text-section: 32px;
+  }
+}

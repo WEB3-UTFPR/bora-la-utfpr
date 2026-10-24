@@ -1,0 +1,17 @@
+node_modules/
+dist/
+build/
+.angular/
+coverage/
+package-lock.json
+.agents/
+.claude/
+.cursor/
+.opencode/
+.codex/
+.github/
+docs/
+site/
+CONTRIBUTING.md
+# Review records are immutable evidence under the repository constitution.
+specs/**/reviews/

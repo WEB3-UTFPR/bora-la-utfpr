@@ -1,0 +1,26 @@
+{
+  "name": "bora-la-utfpr",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "start": "npm run start -w apps/web",
+    "build": "npm run build -w apps/web",
+    "test": "npm run test -w apps/web",
+    "test:ci": "npm run test -w apps/web -- --watch=false",
+    "lint": "npm run lint -w apps/web",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "api": "json-server db.json"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "10.1.8",
+    "json-server": "1.0.0-beta.15",
+    "prettier": "3.8.1"
+  },
+  "engines": {
+    "node": "^22.12.0 || >=24.0.0"
+  },
+  "packageManager": "npm@11.6.4"
+}
