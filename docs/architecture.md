@@ -1,8 +1,8 @@
 # 🛠️ Architecture / SSD
 
 **Projeto:** Bora Lá UTFPR
-**Versão:** 1.0.0 · entrevista concluída; aguardando revisão e commit da equipe
-**Última atualização:** 2026-10-21
+**Versão:** 1.1.0 · decisões ratificadas durante o setup
+**Última atualização:** 2026-10-24
 
 > 🤖 **O `prd.md` responde _o quê_ o produto faz. Este responde _onde as coisas
 > moram e como se chamam_.** Detalhe de tela — rota, componente, contrato —
@@ -28,13 +28,13 @@
 | Agentes (subagentes) | `.agents/agents/` (cascas em `.claude/`, `.cursor/`, `.opencode/`) | Implementador, revisores, auditor final e tutor |
 | Ficha da disciplina | `docs/checklist.md` | Regras do projeto, IDs e entregas |
 | Protótipo (Figma) | [Bora Lá UTFPR](https://www.figma.com/design/AP057SPP6qVdCtTnHaRrBs/Sem-t%C3%ADtulo?node-id=0-1) | Telas, jornadas e hierarquia visual; acesso público e navegação confirmados pela equipe (ID1) |
-| Context7 | configuração MCP da IDE, a verificar no setup | Consulta de documentação; não disponível nesta sessão (ID32) |
+| Context7 | configuração MCP da IDE, disponível e utilizado no setup | Consulta de documentação; conexão verificada em 2026-10-24 (ID32) |
 | Supabase MCP | configuração MCP da IDE, limitada ao projeto de desenvolvimento | Contexto do schema e das integrações; conexão a verificar no setup (ID32) |
 | Skill Angular 21 | catálogo de skills da IDE; instalação e compatibilidade a verificar no setup | Padrões específicos da linha escolhida (ID32) |
 
-O conjunto de MCPs e skill acima foi confirmado como **planejado**, não como
-instalado ou conectado. O setup deve verificar a configuração efetiva e indicar
-a skill e seu caminho; sem essa verificação, o ID32 não está comprovado.
+O conjunto de MCPs e skill acima foi confirmado como **planejado** na entrevista.
+O Context7 foi verificado durante o setup; Supabase MCP e skill Angular continuam
+pendentes de verificação. O ID32 completo não está comprovado.
 Documentação oficial é o recurso alternativo quando Context7 estiver indisponível.
 Referências: [contexto para IA do Angular](https://angular.dev/ai/develop-with-ai)
 e [MCP do Supabase](https://supabase.com/docs/guides/ai-tools/mcp).
@@ -151,6 +151,22 @@ backend nem `package.json` nessa pasta. O `db.json` do MVP fica na raiz.
 > conforme a decisão da equipe.
 
 ### 📦 3.1. A raiz do monorepo (npm workspaces)
+
+**Ratificação do setup — 2026-10-24:** a equipe autorizou os ajustes necessários
+para atender à Atividade 07. Adotou-se npm 11.6.4, indicado em `packageManager`,
+após o npm 10.9.8 falhar internamente com `edgesOut` na instalação. O Node
+22.23.1 instalado é compatível com Angular 21. As versões exatas das bibliotecas
+ficam nos manifestos e no lockfile.
+
+A versão direta de `typescript-eslint` foi alinhada à versão já utilizada pelas
+demais ferramentas para eliminar a duplicação de pacotes. A instalação permanece
+hoisted, com `node_modules` e `package-lock.json` somente na raiz.
+
+O gerador foi usado com CSS, routing, modo zoneless, Vitest, sem SSR, sem Git
+interno e sem instalação antecipada. Essas opções concretizam as decisões da
+arquitetura. A página raiz contém apenas uma demonstração descartável do tema,
+com título e três botões PrimeNG, conforme a Atividade 07; não implementa telas
+ou rotas de negócio e será substituída pela primeira história.
 
 Uso de npm workspaces confirmado pela equipe. O `package.json` da raiz declara
 os subprojetos e concentra os comandos abaixo, previstos para o `/utf-setup`:
@@ -402,6 +418,7 @@ conforme cada história for implementada.
 | Data | Versão | O que mudou |
 | :--- | :----- | :---------- |
 | 2026-10-21 | 1.0.0 | Decisões da entrevista `/utf-architecture`; revisão e commit pela equipe antes do setup. |
+| 2026-10-24 | 1.1.0 | Ratificação dos ajustes da Atividade 07: npm, dependências hoisted, opções do gerador e demonstração do tema. |
 
 ## Conferência das declarações exigidas pela disciplina
 

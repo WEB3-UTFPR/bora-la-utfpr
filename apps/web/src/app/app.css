@@ -1,0 +1,16 @@
+:host {
+  display: block;
+}
+
+main {
+  max-width: var(--layout-max-width);
+  margin-inline: auto;
+  padding: var(--space-xl) var(--layout-margin);
+}
+
+.theme-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
