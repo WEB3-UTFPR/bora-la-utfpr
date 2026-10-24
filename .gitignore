@@ -1,0 +1,30 @@
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build output
+dist/
+build/
+out-tsc/
+.angular/
+coverage/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# IDEs and editors
+.idea/
+.project
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/mcp.json
+
+# System
+.DS_Store
+Thumbs.db
