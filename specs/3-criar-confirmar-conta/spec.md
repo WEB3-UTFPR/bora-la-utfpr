@@ -1,6 +1,6 @@
 ---
 issue: 3
-status: rascunho
+status: aprovada
 ---
 
 # US01 — Criar e confirmar uma conta
