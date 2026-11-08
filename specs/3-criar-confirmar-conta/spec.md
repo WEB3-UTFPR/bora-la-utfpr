@@ -20,6 +20,11 @@ Fonte funcional: US01, RN02 e RN03 de `docs/prd.md`. Esta entrega é o MVP/E2:
 cadastro, confirmação e envio de e-mail são simulados, conforme
 `docs/architecture.md`. A demonstração usa exclusivamente dados fictícios.
 
+A revisão da Atividade 11 acrescenta a App Shell e sua navegação como requisitos
+de apresentação desta entrega. Os acréscimos CA14–CA17 estão em revisão pelo
+usuário; o status no frontmatter registra a aprovação anterior e não representa
+aprovação automática destes acréscimos.
+
 ## Critérios de aceite
 
 - [ ] **CA1 — Dado** nome, sobrenome, e-mail válido ainda não cadastrado, senha com no mínimo 8 caracteres e confirmação idêntica, **quando** eu concluir o cadastro em `/auth/sign-up`, **então** minha conta será criada como passageiro e ficará com o e-mail pendente de confirmação, sem exigir vínculo institucional.
@@ -35,6 +40,10 @@ cadastro, confirmação e envio de e-mail são simulados, conforme
 - [ ] **CA11 — Dado** que a conta foi criada, mas o envio simulado falhou, **quando** o sistema informar a falha, **então** a conta será mantida pendente e poderei solicitar reenvio sem repetir o cadastro; uma falha no reenvio será informada e permitirá nova tentativa.
 - [ ] **CA12 — Dado** que enviei o cadastro, **quando** a conexão cair, eu sair da página ou a resposta não chegar, **então** o sistema não afirmará que o cadastro falhou ou foi concluído sem confirmação; ao retomar, poderei tentar novamente e, se a conta já existir, seguirei a orientação de acesso ou reenvio, sem duplicação.
 - [ ] **CA13 — Dado** que estou preenchendo o cadastro e continuo na página, **quando** uma falha de rede impedir o envio, **então** os dados preenchidos serão preservados, o problema será informado e poderei tentar novamente; durante uma operação em andamento, novos cliques de envio serão impedidos.
+- [ ] **CA14 — Dado** que acesso uma tela desta história, inclusive diretamente pela URL, **quando** a página for apresentada, **então** seu conteúdo aparecerá na área principal da App Shell, entre um cabeçalho e um rodapé, preservados ao navegar entre cadastro e confirmação de e-mail.
+- [ ] **CA15 — Dado** que utilizo a aplicação em uma largura de 768 pixels ou mais, **quando** eu acessar a navegação da App Shell, **então** encontrarei o link “Criar conta” para `/auth/sign-up`, poderei acioná-lo sem recarregar a aplicação e reconhecerei quando essa tela estiver ativa; a navegação não oferecerá links para funcionalidades ainda indisponíveis.
+- [ ] **CA16 — Dado** que utilizo a aplicação no celular, em largura inferior a 768 pixels, **quando** eu tocar no botão ☰ do cabeçalho, identificado como “Abrir menu”, **então** uma gaveta lateral esquerda será aberta com a navegação da aplicação; ela começará fechada e também poderá ser aberta pelo teclado.
+- [ ] **CA17 — Dado** que a gaveta está aberta no celular, **quando** eu tocar no link “Criar conta”, **então** a gaveta será fechada e a aplicação navegará para `/auth/sign-up`, exibindo a tela dentro da mesma App Shell, inclusive quando esse já for o endereço atual.
 
 ## Fora de escopo
 
