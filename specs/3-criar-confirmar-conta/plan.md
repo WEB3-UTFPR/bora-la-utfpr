@@ -32,7 +32,7 @@
 
 ## Tarefas
 
-- [ ] **Tarefa 1 — Enquadrar as telas na App Shell**
+- [x] **Tarefa 1 — Enquadrar as telas na App Shell**
   - Cobre: CA14 e CA15, como navegação pelo layout compartilhado.
   - Teste primeiro: acessar `/auth/sign-up` e `/auth/confirm-email` diretamente pelo Router; verificar um único cabeçalho, área principal com a tela e rodapé, nessa ordem. Partindo da confirmação, acionar “Criar conta” na navegação deve atualizar a URL e o conteúdo principal, indicar a rota ativa e preservar a instância da casca. Os testes falham porque o layout e as rotas ainda não existem. Nesta tarefa, as páginas terão apenas a apresentação mínima para identificar seu destino, sem operações de cadastro ou confirmação.
   - Arquivos previstos: `apps/web/src/app/app.{ts,html,css,spec.ts}`, `apps/web/src/app/app.routes.ts`, `apps/web/src/app/shared/layout/app-shell/app-shell.{ts,html,css,spec.ts}`, `apps/web/src/app/shared/layout/header/header.{ts,html,css,spec.ts}`, `apps/web/src/app/shared/layout/navigation/navigation.{ts,html,css,spec.ts}`, `apps/web/src/app/shared/layout/footer/footer.{ts,html,css,spec.ts}`, `apps/web/src/app/features/auth/auth.routes.ts`, `apps/web/src/app/features/auth/sign-up/sign-up.{ts,html,css,spec.ts}`, `apps/web/src/app/features/auth/confirm-email/confirm-email.{ts,html,css,spec.ts}`.

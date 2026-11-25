@@ -73,6 +73,89 @@ button:focus-visible {
   color: var(--color-text-muted);
 }
 
+/* App Shell and Layout Structure */
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-disabled);
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--layout-max-width);
+  margin-inline: auto;
+  padding: var(--space-md) var(--layout-margin);
+}
+
+.app-brand {
+  font-family: var(--font-heading);
+  font-size: var(--text-section);
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.app-nav .nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.app-nav .nav-link {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: var(--text-body);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: 4px;
+}
+
+.app-nav .nav-link:hover {
+  color: var(--color-primary-hover);
+}
+
+.app-nav .nav-link.active {
+  color: var(--color-primary);
+  font-weight: 700;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.app-main {
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: var(--layout-max-width);
+  margin-inline: auto;
+  padding: var(--space-lg) var(--layout-margin);
+  box-sizing: border-box;
+}
+
+.app-footer {
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-disabled);
+  margin-top: auto;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: var(--layout-max-width);
+  margin-inline: auto;
+  padding: var(--space-md) var(--layout-margin);
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--text-compact);
+}
+
 /* Mobile-first: md starts at 768px; lg starts at 1024px. */
 @media (min-width: 768px) {
   :root {

@@ -1,0 +1,15 @@
+<nav class="app-nav" aria-label="Navegação principal">
+  <ul class="nav-list">
+    <li class="nav-item">
+      <a
+        routerLink="/auth/sign-up"
+        routerLinkActive="active"
+        #signUpLink="routerLinkActive"
+        [attr.aria-current]="signUpLink.isActive ? 'page' : null"
+        class="nav-link"
+      >
+        Criar conta
+      </a>
+    </li>
+  </ul>
+</nav>
