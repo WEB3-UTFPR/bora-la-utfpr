@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
@@ -6,4 +6,10 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   imports: [RouterLink, RouterLinkActive],
   templateUrl: './navigation.html',
 })
-export class Navigation {}
+export class Navigation {
+  readonly linkSelected = output<void>();
+
+  onLinkClick(): void {
+    this.linkSelected.emit();
+  }
+}

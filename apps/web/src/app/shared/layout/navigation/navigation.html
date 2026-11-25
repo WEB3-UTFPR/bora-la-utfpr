@@ -7,6 +7,7 @@
         #signUpLink="routerLinkActive"
         [attr.aria-current]="signUpLink.isActive ? 'page' : null"
         class="nav-link"
+        (click)="onLinkClick()"
       >
         Criar conta
       </a>

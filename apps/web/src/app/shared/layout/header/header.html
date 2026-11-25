@@ -1,6 +1,15 @@
 <header class="app-header">
   <div class="header-container">
     <span class="app-brand">Bora Lá</span>
-    <app-navigation />
+    <button
+      class="hamburger-btn"
+      aria-label="Abrir menu"
+      aria-controls="app-drawer"
+      [attr.aria-expanded]="menuOpen()"
+      (click)="onHamburgerClick()"
+    >
+      ☰
+    </button>
+    <app-navigation class="header-nav" />
   </div>
 </header>

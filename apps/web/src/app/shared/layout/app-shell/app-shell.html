@@ -1,7 +1,18 @@
 <div class="app-shell">
-  <app-header />
+  <app-header [menuOpen]="drawerOpen()" (openMenu)="openDrawer()" />
   <main class="app-main">
     <router-outlet />
   </main>
   <app-footer />
+
+  <p-drawer
+    id="app-drawer"
+    position="left"
+    [modal]="true"
+    [visible]="drawerOpen()"
+    (visibleChange)="drawerOpen.set($event)"
+    (onHide)="onDrawerHide()"
+  >
+    <app-navigation (linkSelected)="onNavigationSelected()" />
+  </p-drawer>
 </div>

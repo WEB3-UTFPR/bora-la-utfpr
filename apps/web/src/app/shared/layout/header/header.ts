@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { Navigation } from '../navigation/navigation';
 
 @Component({
@@ -6,4 +6,11 @@ import { Navigation } from '../navigation/navigation';
   imports: [Navigation],
   templateUrl: './header.html',
 })
-export class Header {}
+export class Header {
+  readonly menuOpen = input<boolean>(false);
+  readonly openMenu = output<void>();
+
+  onHamburgerClick(): void {
+    this.openMenu.emit();
+  }
+}

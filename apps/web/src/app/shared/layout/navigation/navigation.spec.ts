@@ -1,12 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 import { Navigation } from './navigation';
+import { Component } from '@angular/core';
+
+@Component({ selector: 'app-fake-noop', template: '' })
+class FakeNoop {}
 
 describe('Navigation', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [Navigation],
-      providers: [provideRouter([])],
+      providers: [provideRouter([{ path: 'auth/sign-up', component: FakeNoop }])],
     }).compileComponents();
   });
 
@@ -32,5 +36,21 @@ describe('Navigation', () => {
     const links = Array.from(compiled.querySelectorAll('a'));
     const linkTexts = links.map((link) => link.textContent?.trim());
     expect(linkTexts).toEqual(['Criar conta']);
+  });
+
+  it('should emit linkSelected when onLinkClick is called', () => {
+    const fixture = TestBed.createComponent(Navigation);
+    fixture.detectChanges();
+
+    let emitted = false;
+    fixture.componentInstance.linkSelected.subscribe(() => {
+      emitted = true;
+    });
+
+    // Call the method directly to avoid triggering RouterLink navigation
+    fixture.componentInstance.onLinkClick();
+    fixture.detectChanges();
+
+    expect(emitted).toBe(true);
   });
 });

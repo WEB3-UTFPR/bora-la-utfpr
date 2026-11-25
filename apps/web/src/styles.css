@@ -156,10 +156,44 @@ button:focus-visible {
   font-size: var(--text-compact);
 }
 
+/* Mobile Drawer — hamburger button and navigation visibility. */
+/* Mobile-first: hamburger visible, inline nav hidden. */
+.hamburger-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: var(--text-section);
+  color: var(--color-text);
+  padding: var(--space-xs);
+  line-height: 1;
+}
+
+.hamburger-btn:focus-visible {
+  outline: 3px solid var(--color-text);
+  outline-offset: 2px;
+}
+
+/* Inline nav (inside header) hidden on mobile */
+.header-nav {
+  display: none;
+}
+
 /* Mobile-first: md starts at 768px; lg starts at 1024px. */
 @media (min-width: 768px) {
   :root {
     --layout-margin: 32px;
+  }
+
+  /* At md+: show inline nav, hide hamburger */
+  .header-nav {
+    display: flex;
+  }
+
+  .hamburger-btn {
+    display: none;
   }
 }
 
